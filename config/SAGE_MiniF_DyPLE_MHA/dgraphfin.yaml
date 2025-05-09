@@ -1,0 +1,60 @@
+model_name: SAGE
+loader_type: MiniF
+data_name: dgraphfin
+
+# preprocess params
+norm_type: norm01
+preprocess: None
+n_bins: 30
+
+# model params
+d_hidden: 40
+
+# dyple layer
+use_dyple: True
+dy_raw_bin_width: True
+init_bin_width: False
+d_feat_emb: 32
+
+# pre mlp
+pre_n_layers: 0  # [0,+inf]
+pre_use_bn: True
+pre_dropout: 0.1
+
+# gnn
+gnn_n_layers: 3  # [1,+inf]
+gnn_dropout: 0.1
+gnn_use_bn: True
+gnn_use_res: True
+gnn_agg: max_pool
+
+# mha
+use_mha: True
+mha_n_layers: 1  # [1,+inf]
+mha_n_heads: 1  # [1,+inf]
+mha_alpha: 0.1
+
+## post mlp
+# post_n_layers: 1  # [1,+inf]
+# post_use_bn: True
+# post_dropout: 0.1
+
+## pre sage
+# use_presage: False
+
+# dataloader params
+bs: 2048
+val_bs: 2048 #11500
+#fanouts: [100,100]
+
+# optimization params
+lr: 0.002
+weight_decay: 0
+max_epochs: 22222
+patience: 16
+device: cuda
+device_id: 0
+seed: 42
+nowandb: True
+
+
