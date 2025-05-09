@@ -26,6 +26,7 @@ Datasets, which can be downloaded from this [google drive link](https://drive.go
 - run <code> python mycode/exp/101_retrain.py -cn tfinance</code>  for T-Finance dataset
 - run <code> python mycode/exp/101_retrain.py -cn elliptic</code>  for Elliptic dataset
 - run <code> python mycode/exp/101_retrain.py -cn tolokers</code>  for Tolokers dataset
+- run <code> python mycode/exp/102_retrain_reallinear_att.py -cn tsocial</code>  for Tolokers dataset
 
 ##  Mainly Dependencies:
 - torch==2.2.0   
